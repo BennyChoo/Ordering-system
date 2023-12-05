@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QFD.Models;
 
 namespace QFD.Models
 {
@@ -70,6 +71,9 @@ namespace QFD.Models
             modelBuilder.Entity<AttachmentSummary>(entity => { entity.HasKey(e => e.FileId); });
 
         }
+
+
+        public DbSet<QFD.Models.Cart> Cart { get; set; } = default!;
 
 
 
